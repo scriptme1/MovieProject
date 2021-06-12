@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Banner from '../components/Banner/Banner';
-import MovieList from '../components/MovieList/MovieList';
-
+import TvList from '../components/TV/TvList';
+// import axios from 'axios';
+// import { API_URL, API_KEY } from '../config';
 
 function Home() {
   useEffect(() => {
@@ -13,7 +14,8 @@ function Home() {
   return (
     <>
       <Banner />
-      <MovieList state={state} setState={setState} />
+
+      <TvList state={state} setState={setState} />
     </>
   );
 }

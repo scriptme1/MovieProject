@@ -1,19 +1,25 @@
 import React from 'react';
-// import Spinner from '../elements/Spinner/Spinner';
+import { useParams } from 'react-router-dom';
 
-const MoviePlayer = (props) => {
+const TvPlayer = () => {
   React.useEffect(() => {
     document.getElementsByClassName('navbar')[0].style.visibility = 'hidden';
   }, []);
 
+  const { tvId } = useParams();
+  const { seasonNumber } = useParams();
+  const { episodeNumber } = useParams();
+
+  const url = `https://fsapi.xyz/tv-tmdb/${tvId}-${seasonNumber}-${episodeNumber}`;
+  console.log(url);
   return (
     <div>
       <iframe
         sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"
-        src={`https://fsapi.xyz/tmdb-movie/${props.match.params.movieId}`}
+        src={url}
         frameBorder={0}
         allowFullScreen={true}
-        title={'movie'}
+        title={'tv'}
         style={{
           overflow: 'hidden',
           overflowX: 'hidden',
@@ -31,4 +37,4 @@ const MoviePlayer = (props) => {
   );
 };
 
-export default MoviePlayer;
+export default TvPlayer;

@@ -25,7 +25,7 @@ const MoviePage = () => {
         revenue={movie.revenue}
         time={movie.runtime}
       />
-      <Grid header="Actors">
+      <Grid header="Casting">
         {movie.actors.map((actor) => (
           <Actor key={actor.credit_id} actor={actor} />
         ))}

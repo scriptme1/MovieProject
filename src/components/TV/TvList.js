@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MovieCards, GridContent, GridElement } from './MovieList.styles';
+import { TvCards, GridContent, GridElement } from './TvList.styles';
 import axios from 'axios';
 import { API_URL, API_KEY } from '../../config';
 import {
@@ -10,10 +10,10 @@ import {
 } from '../../config';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import SearchBar from '../SearchBar/SearchBar';
-import MovieCard from '../MovieCard/MovieCard';
+import TvCard from '../TvCard/TvCard';
 import NoPic from '../../images/no_image.jpg';
 
-const MovieList = (props) => {
+const TvList = (props) => {
   const [isLoading, setisLoading] = useState(true);
   const [isFetching, setIsFetching] = useState(false);
   const [pageNumber, setPageNumber] = useState(0);
@@ -24,13 +24,13 @@ const MovieList = (props) => {
     setisLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  //  setPageNumber(pageNumber + 1); originally inside the useEffect after setisLoading(false)
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const fetchSearchedMovies = async (endpoint) => {
+  const fetchSearchedTvShows = async (endpoint) => {
     setisLoading(true);
 
     await axios
@@ -44,17 +44,17 @@ const MovieList = (props) => {
       });
   };
 
-  const searchMovies = (search) => {
+  const searchTvShows = (search) => {
     const searchTerm = search;
     // setPageNumber(0);
     let endpoint = '';
     if (searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+      endpoint = `${API_URL}tv/popular?api_key=${API_KEY}&language=en-US&page=1`;
     } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
+      endpoint = `${API_URL}search/tv?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
     }
 
-    fetchSearchedMovies(endpoint);
+    fetchSearchedTvShows(endpoint);
     setisLoading(false);
     setSearchTerm(searchTerm);
   };
@@ -63,12 +63,12 @@ const MovieList = (props) => {
     let endpoint = '';
     setisLoading(true);
     if (searchTerm === '') {
-      endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${
+      endpoint = `${API_URL}tv/popular?api_key=${API_KEY}&language=en-US&page=${
         pageNumber + 1
       }`;
       setPageNumber(pageNumber + 1);
     } else {
-      endpoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=${
+      endpoint = `${API_URL}search/tv?api_key=${API_KEY}&language=en-US&query=${searchTerm}&page=${
         pageNumber + 1
       }`;
       setPageNumber(pageNumber + 1);
@@ -91,7 +91,7 @@ const MovieList = (props) => {
     fetchMoreListItems(pageNumber);
     setPageNumber(pageNumber + 1);
     setisLoading(false);
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFetching]);
 
   const handleScroll = () => {
@@ -107,18 +107,18 @@ const MovieList = (props) => {
     <LoadingSpinner />
   ) : (
     <div>
-      <SearchBar searchMovies={searchMovies} inputValue={searchTerm} />
-      <MovieCards>
-        <h1 style={{textAlign: 'center', marginTop: '20px', marginBottom: '20px'}}>Popular Movies</h1>
+      <SearchBar searchMovies={searchTvShows} inputValue={searchTerm} />
+      <TvCards>
+        <h1>Popular TV Show</h1>
         <GridContent>
-          {props.state.map((movie) => (
-            <GridElement key={movie.id} id="list">
-              <MovieCard
-                movieId={movie.id}
-                key={movie.id}
+          {props.state.map((tv) => (
+            <GridElement key={tv.id} id="list">
+              <TvCard
+                tvId={tv.id}
+                key={tv.id}
                 image={
-                  movie.poster_path
-                    ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
+                  tv.poster_path
+                    ? `${IMAGE_BASE_URL}${POSTER_SIZE}${tv.poster_path}`
                     : `${NoPic}`
                 }
                 clickable={true}
@@ -126,9 +126,9 @@ const MovieList = (props) => {
             </GridElement>
           ))}
         </GridContent>
-      </MovieCards>
+      </TvCards>
     </div>
   );
 };
 
-export default MovieList;
+export default TvList;

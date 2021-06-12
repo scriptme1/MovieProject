@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-export const MovieCards = styled.div`
+export const TvCards = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
@@ -23,7 +23,6 @@ export const GridContent = styled.div`
 
   @media (max-width: 720px) {
     grid-template-columns: auto auto;
-
   }
 
   @media (max-width: 480px) {
@@ -55,9 +54,8 @@ export const GridElement = styled.div`
   }
 
   @media screen and (max-width: 720px) {
-   
     &:nth-child(2n + 2) {
-      margin-right: 0 auto;
+      margin-right: 0;
     }
   }
 

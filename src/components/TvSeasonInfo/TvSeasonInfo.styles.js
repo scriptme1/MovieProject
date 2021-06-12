@@ -21,7 +21,6 @@ export const StyledMovieInfo = styled.div`
   padding: 80px 20px;
   box-sizing: border-box;
   animation: ${animateMovieinfo} 1s;
-  
   .movieinfo-content {
     max-width: 1280px;
     min-height: 450px;
@@ -35,8 +34,6 @@ export const StyledMovieInfo = styled.div`
     float: left;
     @media screen and (max-width: 768px) {
       width: 100% !important;
-      text-align: center;
-      margin-top: 20px;
     }
   }
   .movieinfo-text {
@@ -88,6 +85,10 @@ export const StyledMovieInfo = styled.div`
     p {
       margin: 0;
     }
+  }
+
+  .homepage {
+    margin: 0 0 0 40px;
   }
 
   .genres {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MovieImage = styled.img`
+export const TvImage = styled.img`
   /* width: 500px;
   height: auto;
   max-width: 100%;
@@ -8,6 +8,7 @@ export const MovieImage = styled.img`
   transition: all 0.3s;
   box-sizing: border-box;
   border-radius: 20px; */
+
   width: 500px;
   height: auto;
   max-width: 100%;
