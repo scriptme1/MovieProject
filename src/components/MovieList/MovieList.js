@@ -109,7 +109,16 @@ const MovieList = (props) => {
     <div>
       <SearchBar searchMovies={searchMovies} inputValue={searchTerm} />
       <MovieCards>
-        <h1 style={{textAlign: 'center', marginTop: '20px', marginBottom: '20px'}}>Popular Movies</h1>
+        <h1
+          style={{
+            textAlign: 'center',
+            marginTop: '20px',
+            marginBottom: '20px',
+            color: '#baf733',
+          }}
+        >
+          Popular Movies
+        </h1>
         <GridContent>
           {props.state.map((movie) => (
             <GridElement key={movie.id} id="list">

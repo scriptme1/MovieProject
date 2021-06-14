@@ -43,7 +43,7 @@ export const Bg = styled.div`
 
 export const H1 = styled.h1`
   opacity: 1;
-  color: white;
+  color: #baf733;
   font: Corporate ABQ;
   font-size: 50px;
   opacity: 0.8;
@@ -55,7 +55,7 @@ export const H1 = styled.h1`
 
 export const P = styled.p`
   opacity: 1;
-  color: white;
+  color: #baf733;
   font: Corporate ABQ;
   width: auto;
   margin: 0 auto;
@@ -74,28 +74,25 @@ export const Background = styled.div`
   margin: 0;
   overflow: hidden;
   position: absolute;
-
-  /* z-index: 1200; */
 `;
 
 export const VideoBg = styled.video`
-  /* position: absolute; */
+ 
   height: 100%;
   width: 100%;
-  /* float: left; */
+  
   left: 50%;
   top: 50%;
   object-fit: cover;
-  /* transform: translate(-50%, -50%); */
-  /* z-index: -2; */
+ 
   padding: none;
 
-  /* position: fixed; */
+ 
 `;
 export const Button = styled.button`
   opacity: 1;
-  color: white;
-  /* font: Monteserrat; */
+  color: #baf733;
+ 
   background-color: #222;
   width: 20%;
   height: 50px;
@@ -108,7 +105,7 @@ export const Button = styled.button`
     background-color: #333;
     box-shadow: 1px 1px 10px grey;
     opacity: 1;
-    color: orangered;
+    /* color: orangered; */
     transition: 0.5s;
   }
 

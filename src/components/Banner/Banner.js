@@ -10,9 +10,9 @@ import {
   Button,
 } from './Banner.styles';
 
-import videoFile from '../../video/bg-vid1.mp4';
 
-const Banner = () => {
+
+const Banner = ({ videoFile, Header }) => {
   return (
     <>
       <Section>
@@ -24,11 +24,11 @@ const Banner = () => {
         </Background>
         <Bg></Bg>
         <TextDiv>
-          <H1>BROWSE AND GET TO KNOW THE LATEST MOVIES</H1>
-          <P>Sign up with us and create your own movies collections </P>
-          <a href="hotdeals.html">
-            <Button>Explore Movies</Button>
-          </a>
+          <H1>GET TO KNOW YOUR FAVORITE {Header}</H1>
+          <P>Sign up with us and create your own {Header} collections </P>
+          
+            <Button>Explore {Header} </Button>
+          
         </TextDiv>
       </Section>
     </>

@@ -4,26 +4,20 @@ export const MovieCards = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+  
 `;
 
-export const FourColGrid = styled.div``;
+export const FourColGrid = styled.div`
+  
+`;
 
-// export const Image = styled.img`
-//   width: 500px;
-//   height: auto;
-//   max-width: 100%;
-//   max-height: 100%;
-//   transition: all 0.3s;
-//   box-sizing: border-box;
-// `;
 
 export const GridContent = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
-
+  
   @media (max-width: 720px) {
     grid-template-columns: auto auto;
-
   }
 
   @media (max-width: 480px) {

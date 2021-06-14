@@ -106,10 +106,19 @@ const TvList = (props) => {
   return isLoading ? (
     <LoadingSpinner />
   ) : (
-    <div>
+    <div style={{'backgroundColor': '#353535'}}>
       <SearchBar searchMovies={searchTvShows} inputValue={searchTerm} />
       <TvCards>
-        <h1>Popular TV Show</h1>
+        <h1
+          style={{
+            textAlign: 'center',
+            marginTop: '20px',
+            marginBottom: '20px',
+            color: '#baf733'
+          }}
+        >
+          Popular TV Series
+        </h1>
         <GridContent>
           {props.state.map((tv) => (
             <GridElement key={tv.id} id="list">
