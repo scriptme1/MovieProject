@@ -78,14 +78,14 @@ export const Background = styled.div`
 
 export const VideoBg = styled.video`
  
-  height: 100%;
+   height: 100%; 
   width: 100%;
-  
   left: 50%;
   top: 50%;
   object-fit: cover;
- 
   padding: none;
+
+  
 
  
 `;
