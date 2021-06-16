@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/MovieProject/static/css/main.1026a7ec.chunk.css",
-    "main.js": "/MovieProject/static/js/main.a3e8e1da.chunk.js",
-    "main.js.map": "/MovieProject/static/js/main.a3e8e1da.chunk.js.map",
-    "runtime-main.js": "/MovieProject/static/js/runtime-main.69f5e770.js",
-    "runtime-main.js.map": "/MovieProject/static/js/runtime-main.69f5e770.js.map",
-    "static/css/2.ab75b8d7.chunk.css": "/MovieProject/static/css/2.ab75b8d7.chunk.css",
-    "static/js/2.e5e42bda.chunk.js": "/MovieProject/static/js/2.e5e42bda.chunk.js",
-    "static/js/2.e5e42bda.chunk.js.map": "/MovieProject/static/js/2.e5e42bda.chunk.js.map",
-    "static/js/3.7d2b2cd8.chunk.js": "/MovieProject/static/js/3.7d2b2cd8.chunk.js",
-    "static/js/3.7d2b2cd8.chunk.js.map": "/MovieProject/static/js/3.7d2b2cd8.chunk.js.map",
-    "index.html": "/MovieProject/index.html",
-    "static/css/2.ab75b8d7.chunk.css.map": "/MovieProject/static/css/2.ab75b8d7.chunk.css.map",
-    "static/css/main.1026a7ec.chunk.css.map": "/MovieProject/static/css/main.1026a7ec.chunk.css.map",
-    "static/js/2.e5e42bda.chunk.js.LICENSE.txt": "/MovieProject/static/js/2.e5e42bda.chunk.js.LICENSE.txt",
-    "static/media/avengers.4e6462fb.mp4": "/MovieProject/static/media/avengers.4e6462fb.mp4",
-    "static/media/mandalorian.e7692d6a.mp4": "/MovieProject/static/media/mandalorian.e7692d6a.mp4"
+    "main.css": "/static/css/main.1026a7ec.chunk.css",
+    "main.js": "/static/js/main.52f4a66a.chunk.js",
+    "main.js.map": "/static/js/main.52f4a66a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.39dc9531.js",
+    "runtime-main.js.map": "/static/js/runtime-main.39dc9531.js.map",
+    "static/css/2.ab75b8d7.chunk.css": "/static/css/2.ab75b8d7.chunk.css",
+    "static/js/2.d97a9cf3.chunk.js": "/static/js/2.d97a9cf3.chunk.js",
+    "static/js/2.d97a9cf3.chunk.js.map": "/static/js/2.d97a9cf3.chunk.js.map",
+    "static/js/3.7d2b2cd8.chunk.js": "/static/js/3.7d2b2cd8.chunk.js",
+    "static/js/3.7d2b2cd8.chunk.js.map": "/static/js/3.7d2b2cd8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ab75b8d7.chunk.css.map": "/static/css/2.ab75b8d7.chunk.css.map",
+    "static/css/main.1026a7ec.chunk.css.map": "/static/css/main.1026a7ec.chunk.css.map",
+    "static/js/2.d97a9cf3.chunk.js.LICENSE.txt": "/static/js/2.d97a9cf3.chunk.js.LICENSE.txt",
+    "static/media/avengers.4e6462fb.mp4": "/static/media/avengers.4e6462fb.mp4",
+    "static/media/bg-vid1.c434166a.mp4": "/static/media/bg-vid1.c434166a.mp4",
+    "static/media/mandalorian.e7692d6a.mp4": "/static/media/mandalorian.e7692d6a.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.69f5e770.js",
+    "static/js/runtime-main.39dc9531.js",
     "static/css/2.ab75b8d7.chunk.css",
-    "static/js/2.e5e42bda.chunk.js",
+    "static/js/2.d97a9cf3.chunk.js",
     "static/css/main.1026a7ec.chunk.css",
-    "static/js/main.a3e8e1da.chunk.js"
+    "static/js/main.52f4a66a.chunk.js"
   ]
 }
